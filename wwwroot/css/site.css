@@ -1,4 +1,4 @@
-﻿html, *, *::before, *::after{
+html, *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,3 +9,75 @@ body{
     font-size: 16px;
     line-height: 1.2;
 }
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.products-list{
+  width: 35vw;
+  height: 80vh;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: calc(80vh - 43.2px);
+  padding: 1rem;
+  box-shadow: 0 0 15px 0px #ccc;
+  border-radius: 5px;
+}
+
+.pagination{
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 100%;
+  margin-top: 1rem;
+  box-shadow: 0 0 15px 0 #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pagination__item{
+  flex-grow: 1;
+  text-decoration: none;
+  color: royalblue
+  background-color: #fff;
+  text-align: center;
+  padding: .25rem;
+}
+
+.pagination__item.active{
+  color: #fff;
+  background-color: royalblue;
+}
+
+.card{
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: .45rem;
+}
+
+.card__title{
+  margin-bottom: .75rem;
+}
+
+.card__content{
+  margin-bottom: .5rem;
+}
+
+.card__footer{
+  display: inline-block;
+  background-color: royalblue;
+  color: #fff;
+  width: content;
+  padding: .25rem;
+  border-radius: 5px;
+}
+
+

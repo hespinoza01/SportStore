@@ -3,13 +3,12 @@
 @{
 }
 
-@foreach(Product p in Model.Products){
-    <div>
-        <h3>@p.Name</h3>
-        <p>@p.Description</p>
-        <h4>@p.Price.ToString("c")</h4>
+<div class="products-list">
+    <div class="card-container">
+        @foreach(Product p in Model.Products){
+            @Html.Partial("ProductSummary", p)
+        }
     </div>
-    <br>
-}
 
-<div page-model="@Model.PagingInfo" page-action="List"></div>
+    <div class="pagination" page-model="@Model.PagingInfo" page-action="List"></div>
+</div>

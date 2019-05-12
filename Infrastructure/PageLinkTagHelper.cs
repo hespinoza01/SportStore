@@ -36,6 +36,8 @@ namespace SportStore.Infrastructure
                 TagBuilder tag = new TagBuilder("a");
 
                 tag.Attributes["href"] = urlHelper.Action(PageAction, new { productPage = i });
+                tag.Attributes["class"] = "pagination__item";
+                tag.AddCssClass(i == PageModel.CurrentPage ? "active" : "");
                 tag.InnerHtml.Append(i.ToString());
                 result.InnerHtml.AppendHtml(tag);
             }
